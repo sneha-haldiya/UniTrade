@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import LandingPage from "./components/Landing";
 import Home from "./components/Home";
 import AddProduct from "./components/AddProduct";
+import ProductPage from "./components/ProductPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </Router>
     </AuthProvider>

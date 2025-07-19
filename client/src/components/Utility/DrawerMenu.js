@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa";
 
 const DrawerMenu = ({ isOpen, onClose, user, logout }) => {
   const menuRef = useRef(null);
@@ -28,9 +29,8 @@ const DrawerMenu = ({ isOpen, onClose, user, logout }) => {
   return (
     <div
       ref={menuRef}
-      className={`${
-        isOpen ? "translate-x-0" : "translate-x-full"
-      } fixed top-0 right-0 h-full w-64 bg-gradient-to-l from-gray-900 to-gray-800 z-50 transition-transform duration-300 ease-in-out`}
+      className={`${isOpen ? "translate-x-0" : "translate-x-full"
+        } fixed top-0 right-0 h-full w-64 bg-gradient-to-l from-gray-900 to-gray-800 z-50 transition-transform duration-300 ease-in-out`}
     >
       <div className="p-4 text-lg">
         <Link
@@ -46,10 +46,17 @@ const DrawerMenu = ({ isOpen, onClose, user, logout }) => {
           Add Product
         </Link>
         <Link
-          to="/add-product"
+          to="/view-product"
           className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300"
         >
-          Remove Product
+          Products to Sell
+        </Link>
+        <Link
+          to="/view-product"
+          className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300 "
+        >
+          <span className={`mr-2`}><FaShoppingCart /></span>
+          Orders Placed
         </Link>
         <button
           onClick={() => {

@@ -41,7 +41,6 @@ exports.loginUser = async (req, res) => {
         }
         // Generate a JWT token and send it in the response
         const token = await createSession(existingUser._id.toString());
-        console.log(token);
         res.status(200).json({ token , user: existingUser});
     } catch (error) {
         console.error(error);
