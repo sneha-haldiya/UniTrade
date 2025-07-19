@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const userRoutes = require("./routes/userRoutes")
+const productRoutes = require("./routes/productRoutes")
 const connectDB = require("./config/database");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -22,6 +23,7 @@ app.use(
 
 // Routes
 app.use("/api/users", userRoutes);
+app.use("/api/products", productRoutes);
 
 // Start the server
 const port = process.env.PORT || 8000;
