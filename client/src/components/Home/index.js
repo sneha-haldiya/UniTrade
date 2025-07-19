@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ProductList from "./ProductList";
 import Loading from "../Utility/Loading";
+import Pagination from "./Pagination";
 
 const ProductsList = () => {
+    const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
     const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -28,7 +30,6 @@ const ProductsList = () => {
         fetchProducts();
     }, []);
 
-    const currentPage = 1;
     const productsPerPage = 20;
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -37,6 +38,9 @@ const ProductsList = () => {
         indexOfLastProduct
     );
 
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
 
     return (
         <div className="lg:w-4/5 mx-4 md:mx-auto py-4">
@@ -47,7 +51,12 @@ const ProductsList = () => {
                         <div>filters to be added later</div>
                         <div className="w-full flex flex-col items-center">
                             <ProductList currentProducts={currentProducts} />
-                            <div>pagination to be added later</div>
+                            <Pagination
+                                filteredProducts={filteredProducts}
+                                productsPerPage={productsPerPage}
+                                currentPage={currentPage}
+                                paginate={paginate}
+                            />
                         </div>
                     </div>
                 ) : (
