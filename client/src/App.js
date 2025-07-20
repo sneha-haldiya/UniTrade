@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import AddProduct from "./components/AddProduct";
 import ProductPage from "./components/ProductPage";
 import UserProfile from "./components/UserProfile";
+import EditProduct from "./components/EditProduct";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/add-product" element={<AddProduct />} />
           <Route path="/profile/:id" element={<UserProfile />} />
+          <Route path="/product/:id/edit" element={<EditProduct />} />
         </Routes>
       </Router>
     </AuthProvider>
