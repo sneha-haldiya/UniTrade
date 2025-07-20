@@ -47,12 +47,6 @@ const DrawerMenu = ({ isOpen, onClose, user, logout }) => {
         </Link>
         <Link
           to="/view-product"
-          className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300"
-        >
-          Products to Sell
-        </Link>
-        <Link
-          to="/view-product"
           className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300 "
         >
           <span className={`mr-2`}><FaShoppingCart /></span>

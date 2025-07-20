@@ -47,3 +47,67 @@ exports.loginUser = async (req, res) => {
         res.status(500).json({ message: "Internal server error" });
     }
 };
+
+exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+exports.getUserById = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+exports.updateUser = async (req, res) => {
+  const { userId } = req.params;
+  const { body } = req;
+
+  try {
+    // Check if the request body is empty
+    if (!body) {
+      return res.status(400).json({ error: "Request body is empty" });
+    }
+
+    const user = await User.findByIdAndUpdate(userId, body, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.json(user);
+  } catch (error) {
+    // Check for specific validation errors
+    if (error.name === "ValidationError") {
+      return res.status(400).json({ error: error.message });
+    }
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+exports.deleteUser = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const user = await User.findByIdAndRemove(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.json({ message: "User deleted" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
