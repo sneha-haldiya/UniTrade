@@ -1,31 +1,50 @@
 import React, { useState, useEffect } from "react";
 import { FaEdit, FaShoppingCart } from "react-icons/fa";
 import { useAuth } from "../../context/authContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Dialog from "./Dialog";
 import Loading from "../Utility/Loading";
+import { loadStripe } from "@stripe/stripe-js";
 
 const ProductDetails = ({ productId }) => {
     const { user } = useAuth();
-    const navigate = useNavigate();
     const userId = user ? user.id : null;
     const [clickedButtonId, setClickedButtonId] = useState(null);
     const [productDetails, setProductDetails] = useState(null);
     const [isDialogOpen, setDialogOpen] = useState(false);
 
-    const handleConfirmPurchase = async (userData) => {
-        alert("Purchase confirmed!");
-        const response = await fetch(
-            `${process.env.REACT_APP_BASE_URL}/api/products/${productId}`,
-            {
-                method: "DELETE",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+    const handleConfirmPurchase = async () => {
+        if (!productDetails || !user || !user.id) {
+            console.error("Missing product details or user");
+            return;
+        }
+
+        const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/payment/create-checkout-session`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                productId: productDetails._id,
+                userId: user.id,
+            }),
+        });
+
+        const data = await response.json();
+
+        if (data?.url) {
+            const isLocalhost = window.location.hostname === "localhost";
+            const isSecure = data.url.startsWith("https://") || isLocalhost;
+
+            if (!isSecure) {
+                alert("Stripe requires HTTPS in production. Use Vercel/Render or set up HTTPS.");
+                return;
             }
-        );
-        navigate("/home");
-        setDialogOpen(false);
+
+            window.location.href = data.url;
+        } else {
+            console.error("No redirect URL from backend:", data);
+        }
     };
 
     const handleAddToCart = (productId) => {
@@ -76,7 +95,7 @@ const ProductDetails = ({ productId }) => {
             )}
             <div className="flex flex-col md:flex-row p-4">
                 <img
-                    src={productDetails.images[0]} 
+                    src={productDetails.images[0]}
                     alt={productDetails.name}
                     className="w-full md:w-1/2 h-auto rounded-lg"
                 />
@@ -91,8 +110,8 @@ const ProductDetails = ({ productId }) => {
                     <div className="buy-now-button-container">
                         <button
                             className={`mt-8 flex items-center px-5 py-3 rounded text-lg ${clickedButtonId === productDetails._id
-                                    ? "bg-green-500"
-                                    : "bg-yellow-500 hover:bg-yellow-600"
+                                ? "bg-green-500"
+                                : "bg-yellow-500 hover:bg-yellow-600"
                                 } text-gray-800 transition duration-300 transform`}
                             onClick={() => handleAddToCart(productDetails._id)}
                         >

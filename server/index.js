@@ -1,14 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const userRoutes = require("./routes/userRoutes")
-const productRoutes = require("./routes/productRoutes")
+const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
+const orderRoutes = require("./routes/order");
+const paymentRoutes = require("./routes/payment")
 const connectDB = require("./config/database");
 const dotenv = require("dotenv");
 dotenv.config();
 
 connectDB();
-
 const app = express();
 
 // Middleware
@@ -24,6 +25,9 @@ app.use(
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/products", productRoutes);
+app.use("/api/payment", paymentRoutes);
+app.use("/api/order", orderRoutes);
+
 
 // Start the server
 const port = process.env.PORT || 8000;

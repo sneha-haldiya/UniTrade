@@ -9,6 +9,8 @@ import AddProduct from "./components/AddProduct";
 import ProductPage from "./components/ProductPage";
 import UserProfile from "./components/UserProfile";
 import EditProduct from "./components/EditProduct";
+import PaymentSuccess from "./components/PaymentSuccess";
+import OrdersPlaced from "./components/OrdersPlaced";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/add-product" element={<AddProduct />} />
           <Route path="/profile/:id" element={<UserProfile />} />
           <Route path="/product/:id/edit" element={<EditProduct />} />
+          <Route path="/payment-success" element={<PaymentSuccess />} />
+          <Route path="/view-product" element={<OrdersPlaced />} />
         </Routes>
       </Router>
     </AuthProvider>

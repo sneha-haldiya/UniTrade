@@ -51,6 +51,7 @@ const ProductsList = () => {
                 const products = await response.json();
                 // Filter products based on the search query, price range, and category
                 const filtered = products
+                    .filter((product) => product.status !== "sold")
                     .filter((product) =>
                         product.name.toLowerCase().includes(searchQuery.toLowerCase())
                     )
@@ -96,6 +97,7 @@ const ProductsList = () => {
                         }
                         return 0;
                     });
+
                 setFilteredProducts(filtered);
                 setIsLoading(false);
             } else {
