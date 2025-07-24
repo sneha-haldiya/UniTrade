@@ -17,7 +17,7 @@ const ProductForm = ({
         <form onSubmit={handleSubmit}>
             {/* Product Name */}
             <div className="mb-4">
-                <label htmlFor="name" className="block text-gray-600">
+                <label htmlFor="name" className="block text-white">
                     Product Name
                 </label>
                 <input
@@ -33,7 +33,7 @@ const ProductForm = ({
 
             {/* Product Category Dropdown */}
             <div className="mb-4">
-                <label htmlFor="category" className="block text-gray-600">
+                <label htmlFor="category" className="block text-white">
                     Category
                 </label>
                 <select
@@ -55,7 +55,7 @@ const ProductForm = ({
 
             {/* Product Description */}
             <div className="mb-4">
-                <label htmlFor="description" className="block text-gray-600">
+                <label htmlFor="description" className="block text-white">
                     Description
                 </label>
                 <textarea
@@ -70,7 +70,7 @@ const ProductForm = ({
 
             {/* Product Price */}
             <div className="mb-4">
-                <label htmlFor="price" className="block text-gray-600">
+                <label htmlFor="price" className="block text-white">
                     Price (in ₹)
                 </label>
                 <input
@@ -87,7 +87,7 @@ const ProductForm = ({
 
             {/* Product Images */}
             <div className="mb-4">
-                <label htmlFor="images" className="block text-gray-600">
+                <label htmlFor="images" className="block text-white">
                     Images
                 </label>
                 <input
@@ -130,7 +130,7 @@ const ProductForm = ({
 
             {/* Product Specifications (if applicable) */}
             <div className="mb-4">
-                <label htmlFor="specifications" className="block text-gray-600">
+                <label htmlFor="specifications" className="block text-white">
                     Specifications
                 </label>
                 {formData.specifications.map((spec, index) => (
@@ -206,7 +206,7 @@ const ProductForm = ({
             <div className="mb-4">
                 <button
                     type="submit"
-                    className="w-full py-2 px-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+                    className="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300"
                 >
                     Save Changes
                 </button>

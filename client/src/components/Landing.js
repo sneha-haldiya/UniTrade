@@ -23,7 +23,7 @@ const LandingPage = () => {
                 <div className="mt-10 space-y-4 flex flex-col items-center">
                     <Link
                         to="/register"
-                        className="bg-yellow-500 text-gray-900 hover:bg-yellow-600 hover:text-white font-semibold px-6 py-3 rounded-full flex items-center transition-all duration-300"
+                        className="bg-indigo-600 text-white hover:bg-indigo-700 hover:text-white font-semibold px-6 py-3 rounded-full flex items-center transition-all duration-300"
                     >
                         Join Now <FaArrowRight className="ml-2" />
                     </Link>

@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div className="m-2 flex flex-col justify-between flex-shrink-0 w-64 bg-gray-900 text-white px-4 py-5 rounded-md hover:scale-105 transition-all">
+        <div className="m-2 flex flex-col justify-between flex-shrink-0 w-64 bg-gray-800 text-white px-4 py-5 rounded-md hover:scale-105 transition-all">
             <a href={`/product/${product._id}`} className="text-blue-500 block ">
                 <div
                     className="w-full h-52 mb-2 rounded-md"
@@ -39,8 +39,8 @@ const ProductCard = ({ product }) => {
                     <button
                         className={`flex items-center px-4 py-2 rounded ${clickedButtonId === product._id
                             ? "bg-green-500"
-                            : "bg-yellow-500 hover:bg-yellow-600"
-                            } text-gray-800 transition duration-300 transform`}
+                            : "bg-indigo-600 hover:bg-indigo-800"
+                            } text-gray-300 transition duration-300 transform`}
                         onClick={() => handleAddToCart(product)}>
                         <span className={`mr-2 ${clickedButtonId === product._id ? "animate-ping" : ""} transition-transform`}>
                             <FaShoppingCart />

@@ -9,7 +9,7 @@ const Pagination = ({ filteredProducts, productsPerPage, currentPage, paginate, 
                 {Array.from({ length: pageNumbers }).map((_, index) => (
                     <li key={index}>
                         <button
-                            className={`px-3 py-2 mx-1 rounded-lg bg-gray-900 text-white ${currentPage === index + 1 ? "bg-yellow-500" : ""}`}
+                            className={`px-3 py-2 mx-1 rounded-lg bg-gray-900 text-white ${currentPage === index + 1 ? "bg-indigo-600" : ""}`}
                             onClick={() => paginate(index + 1)}>
                             {index + 1}
                         </button>

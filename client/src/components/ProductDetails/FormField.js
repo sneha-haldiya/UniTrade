@@ -3,7 +3,7 @@ import React from "react";
 const FormField = ({ label, name, type, value, onChange, error }) => {
     return (
         <div className="mb-4">
-            <label className="block text-gray-600 text-sm mb-2">{label}</label>
+            <label className="block text-white text-sm mb-2">{label}</label>
             <input
                 type={type}
                 name={name}

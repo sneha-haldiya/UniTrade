@@ -125,7 +125,7 @@ const ProductsList = () => {
     };
 
     return (
-        <div className="lg:w-4/5 mx-4 md:mx-auto py-4">
+        <div className="lg:w-4/5 mx-4 md:mx-auto py-4 bg-slate-100">
             <h1 className="text-3xl font-semibold mb-4">All Products</h1>
             <div>
                 {!isLoading ? (

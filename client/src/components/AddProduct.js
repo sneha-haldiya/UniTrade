@@ -1,7 +1,7 @@
 // AddProduct.js
 import React, { useState } from "react";
-import Navbar from "./Utility/Navbar"; // Import your Navbar component
-import Footer from "./Utility/Footer"; // Import your Footer component
+import Navbar from "./Utility/Navbar";
+import Footer from "./Utility/Footer";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 
@@ -92,7 +92,6 @@ const AddProduct = () => {
                     .then((response) => {
                         if (response.ok) {
                             // Product was successfully added
-                            // You can redirect the user or show a success message
                             console.log("Product added successfully!");
                             navigate("/home");
                         } else {
@@ -123,7 +122,7 @@ const AddProduct = () => {
         <div className="min-h-screen">
             <Navbar />
             <div className="w-4/5 mx-auto py-4">
-                <h1 className="text-3xl font-semibold text-gray-900 mb-4">
+                <h1 className="text-3xl font-semibold text-white mb-4">
                     Add New Product
                 </h1>
                 <form onSubmit={handleSubmit}>
@@ -138,7 +137,7 @@ const AddProduct = () => {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full border rounded-lg py-2 px-3"
+                            className="w-full text-white bg-gray-600 border rounded-lg py-2 px-3"
                             required
                         />
                     </div>
@@ -153,7 +152,7 @@ const AddProduct = () => {
                             name="category"
                             value={formData.category}
                             onChange={handleChange}
-                            className="w-full border rounded-lg py-2 px-3"
+                            className="w-full border bg-gray-600 text-white rounded-lg py-2 px-3"
                             required
                         >
                             <option value="other">Other</option>
@@ -175,7 +174,7 @@ const AddProduct = () => {
                             name="description"
                             value={formData.description}
                             onChange={handleChange}
-                            className="w-full border rounded-lg py-2 px-3"
+                            className="w-full border bg-gray-600 text-white rounded-lg py-2 px-3"
                             required
                         />
                     </div>
@@ -191,7 +190,7 @@ const AddProduct = () => {
                             name="price"
                             value={formData.price}
                             onChange={handleChange}
-                            className="w-full border rounded-lg py-2 px-3"
+                            className="w-full border bg-gray-600 text-white rounded-lg py-2 px-3"
                             required
                             min="0"
                         />
@@ -214,7 +213,7 @@ const AddProduct = () => {
                                     images: Array.from(e.target.files),
                                 })
                             }
-                            className="w-full border rounded-lg py-2 px-3"
+                            className="w-full border bg-gray-600 text-white rounded-lg py-2 px-3"
                             required
                         />
                     </div>
@@ -232,7 +231,7 @@ const AddProduct = () => {
                                     name={`specification-${index}-key`}
                                     value={spec.key}
                                     readOnly
-                                    className="w-[45%] border rounded-lg py-2 px-3 bg-gray-200 mr-2"
+                                    className="w-[45%] border rounded-lg py-2 px-3 bg-gray-600 text-white mr-2"
                                     disabled
                                 />
                                 <input
@@ -240,7 +239,7 @@ const AddProduct = () => {
                                     name={`specification-${index}-value`}
                                     value={spec.value}
                                     readOnly
-                                    className="w-[45%] border rounded-lg py-2 px-3 bg-gray-200 mr-2"
+                                    className="w-[45%] border rounded-lg py-2 px-3 bg-gray-600 text-white mr-2"
                                     disabled
                                 />
                                 <button
@@ -264,7 +263,7 @@ const AddProduct = () => {
                                         key: e.target.value,
                                     })
                                 }
-                                className="w-full md:w-[45%] border rounded-lg py-2 px-3 my-2 md:my-0"
+                                className="w-full md:w-[45%] border bg-gray-600 text-white rounded-lg py-2 px-3 my-2 md:my-0"
                                 placeholder="Key"
                             />
                             <input
@@ -278,7 +277,7 @@ const AddProduct = () => {
                                         value: e.target.value,
                                     })
                                 }
-                                className="w-full md:w-[45%] border rounded-lg py-2 px-3 my-2 md:my-0"
+                                className="w-full md:w-[45%] border bg-gray-600 text-white rounded-lg py-2 px-3 my-2 md:my-0"
                                 placeholder="Value"
                             />
                             <button
@@ -295,7 +294,7 @@ const AddProduct = () => {
                     <div className="mb-4">
                         <button
                             type="submit"
-                            className="w-full py-2 px-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+                            className="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-800 transition duration-300"
                         >
                             Add Product
                         </button>

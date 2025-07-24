@@ -42,8 +42,8 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="bg-white p-8 rounded-lg shadow-lg sm:w-96 md:w-1/2">
-        <h1 className="text-3xl font-semibold text-gray-900 mb-4">Login</h1>
+      <div className="bg-slate-800 p-8 rounded-lg shadow-lg sm:w-96 md:w-1/2">
+        <h1 className="text-3xl font-semibold text-white mb-4">Login</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
@@ -52,7 +52,7 @@ const Login = () => {
               placeholder="Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full py-2 px-4 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+              className="w-full py-2 px-4 rounded-lg text-white bg-slate-700 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
             />
           </div>
           <div className="mb-4">
@@ -62,19 +62,19 @@ const Login = () => {
               placeholder="Password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full py-2 px-4 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+              className="w-full py-2 px-4 rounded-lg text-white bg-slate-700 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
             />
           </div>
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+            className="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300"
           >
             Login
           </button>
         </form>
         <p className="text-gray-500 mt-4 text-center">
           Don't have an account?{" "}
-          <a href="/register" className="text-yellow-500 hover:text-gray-900">
+          <a href="/register" className="text-indigo-400 hover:text-white">
             Register here
           </a>
           .

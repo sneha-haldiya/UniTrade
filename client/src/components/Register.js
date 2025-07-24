@@ -74,8 +74,8 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="bg-white p-8 rounded-lg shadow-lg sm:w-96 md:w-2/3">
-        <h1 className="text-3xl font-semibold text-gray-900 mb-4">Register</h1>
+      <div className="bg-slate-800 p-8 rounded-lg shadow-lg sm:w-96 md:w-2/3">
+        <h1 className="text-3xl font-semibold text-white mb-4">Register</h1>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2 pr-0 md:pr-2">
@@ -86,9 +86,9 @@ const Register = () => {
                   placeholder="Full Name"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.fullName ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.fullName && (
                   <p className="text-red-500 text-sm mt-1">
@@ -103,9 +103,9 @@ const Register = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.email ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.email && (
                   <p className="text-red-500 text-sm mt-1">
@@ -120,9 +120,9 @@ const Register = () => {
                   placeholder="Password"
                   value={formData.password}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.password ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.password && (
                   <p className="text-red-500 text-sm mt-1">
@@ -137,9 +137,9 @@ const Register = () => {
                   placeholder="College"
                   value={formData.college}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.college ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.college && (
                   <p className="text-red-500 text-sm mt-1">
@@ -154,9 +154,9 @@ const Register = () => {
                   placeholder="College ID"
                   value={formData.collegeId}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.collegeId ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.collegeId && (
                   <p className="text-red-500 text-sm mt-1">
@@ -173,9 +173,9 @@ const Register = () => {
                   placeholder="Phone Number"
                   value={formData.phoneNo}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.phoneNo ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.phoneNo && (
                   <p className="text-red-500 text-sm mt-1">
@@ -190,9 +190,9 @@ const Register = () => {
                   placeholder="Address"
                   value={formData.address}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.address ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.address && (
                   <p className="text-red-500 text-sm mt-1">
@@ -207,9 +207,9 @@ const Register = () => {
                   placeholder="City"
                   value={formData.city}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.city ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.city && (
                   <p className="text-red-500 text-sm mt-1">{formErrors.city}</p>
@@ -222,9 +222,9 @@ const Register = () => {
                   placeholder="State"
                   value={formData.state}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.state ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.state && (
                   <p className="text-red-500 text-sm mt-1">
@@ -239,9 +239,9 @@ const Register = () => {
                   placeholder="Zip Code"
                   value={formData.zipCode}
                   onChange={handleChange}
-                  className={`w-full py-2 px-4 rounded-lg bg-gray-100 border ${
+                  className={`w-full py-2 px-4 rounded-lg bg-slate-700 border ${
                     formErrors.zipCode ? "border-red-500" : "border-gray-300"
-                  } focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent`}
+                  } focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent`}
                 />
                 {formErrors.zipCode && (
                   <p className="text-red-500 text-sm mt-1">
@@ -254,7 +254,7 @@ const Register = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="w-full py-2 px-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+              className="w-full py-2 px-4	bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition duration-300"
             >
               Register
             </button>
@@ -262,7 +262,7 @@ const Register = () => {
         </form>
         <p className="text-gray-500 mt-4 text-center">
           Already have an account?{" "}
-          <a href="/login" className="text-yellow-500 hover:text-gray-900">
+          <a href="/login" className="text-indigo-400 hover:text-white">
             Login here
           </a>
           .

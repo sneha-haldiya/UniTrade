@@ -98,7 +98,7 @@ const UserDetails = ({ userData, displayEdit, editMode, formData, handleChange, 
                         <button
                             type="button"
                             onClick={handleSaveClick}
-                            className="w-full py-2 px-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+                            className="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-800 transition duration-300"
                         >
                             Save
                         </button>
@@ -107,7 +107,7 @@ const UserDetails = ({ userData, displayEdit, editMode, formData, handleChange, 
                         <button
                             type="button"
                             onClick={handleEditClick}
-                            className="w-full py-2 px-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition duration-300"
+                            className="w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-800 transition duration-300"
                         >
                             Edit
                         </button>

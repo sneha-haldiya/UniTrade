@@ -10,7 +10,7 @@ const UserField = ({ label, name, value, onChange, editMode }) => {
                     name={name}
                     value={value}
                     onChange={onChange}
-                    className="w-full py-2 px-4 rounded-lg bg-gray-100 border border-gray-900 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="w-full py-2 px-4 text-white rounded-lg bg-gray-600 border border-gray-900 focus:border-transparent focus:outline-none "
                 />
             ) : (
                 <input
@@ -18,7 +18,7 @@ const UserField = ({ label, name, value, onChange, editMode }) => {
                     name={name}
                     value={value}
                     onChange={onChange}
-                    className="w-full py-2 px-4 rounded-lg bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                    className="w-full py-2 px-4 text-white rounded-lg bg-gray-600 border border-gray-300 focus:outline-none focus:border-transparent"
                     disabled
                 />
             )}

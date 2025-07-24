@@ -124,7 +124,7 @@ const UserProfile = () => {
         <div className="min-h-screen">
             <Navbar />
             <div className="w-4/5 mx-auto py-4">
-                <h1 className="text-3xl font-semibold text-gray-900 mb-4">
+                <h1 className="text-3xl font-semibold text-gray-800 mb-4">
                     User Profile
                 </h1>
                 {userData && (

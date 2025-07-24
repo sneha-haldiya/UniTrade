@@ -35,25 +35,25 @@ const DrawerMenu = ({ isOpen, onClose, user, logout }) => {
       <div className="p-4 text-lg">
         <Link
           to={`/profile/${user.id}`}
-          className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300"
+          className="block text-gray-200 hover:text-indigo-300 py-2 transition duration-300"
         >
           Profile
         </Link>
         <Link
           to={`/home`}
-          className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300"
+          className="block text-gray-200 hover:text-indigo-300 py-2 transition duration-300"
         >
           Home
         </Link>
         <Link
           to="/add-product"
-          className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300"
+          className="block text-gray-200 hover:text-indigo-300 py-2 transition duration-300"
         >
           Add Product
         </Link>
         <Link
           to="/view-product"
-          className="block text-gray-200 hover:text-yellow-500 py-2 transition duration-300 "
+          className="block text-gray-200 hover:text-indigo-300 py-2 transition duration-300 "
         >
          {/*  <span className={`mr-2`}><FaShoppingCart /></span> */}
           Orders Placed
@@ -64,7 +64,7 @@ const DrawerMenu = ({ isOpen, onClose, user, logout }) => {
             onClose(); // Close the drawer when the user clicks Sign Out
             navigate("/home");
           }}
-          className="block text-gray-200 hover:text-yellow-500 py-2 w-full text-left transition duration-300"
+          className="block text-gray-200 hover:text-indigo-300 py-2 w-full text-left transition duration-300"
         >
           Sign Out
         </button>

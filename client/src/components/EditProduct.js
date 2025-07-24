@@ -172,7 +172,7 @@ const EditProduct = () => {
         <div className="min-h-screen">
             <Navbar />
             <div className="w-4/5 mx-auto py-4">
-                <h1 className="text-3xl font-semibold text-gray-900 mb-4">
+                <h1 className="text-3xl font-semibold text-white mb-4">
                     Edit Product
                 </h1>
                 <ProductForm

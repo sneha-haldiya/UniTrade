@@ -85,7 +85,7 @@ const ProductDetails = ({ productId }) => {
             {userId === productDetails.uploadedBy._id && (
                 <Link
                     to={`/product/${productId}/edit`}
-                    className="bg-gray-900 p-2 hover:text-yellow-500 text-white border-b-2 border-transparent font-semibold mb-4 inline-flex items-center gap-2 transform hover:scale-105 hover:shadow-2xl rounded-tl-lg rounded-br-lg transition-transform duration-300"
+                    className="bg-gray-900 p-2 hover:text-indigo-300 text-white border-b-2 border-transparent font-semibold mb-4 inline-flex items-center gap-2 transform hover:scale-105 hover:shadow-2xl rounded-tl-lg rounded-br-lg transition-transform duration-300"
                 >
                     <span className="text-xl">
                         <FaEdit />
@@ -111,7 +111,7 @@ const ProductDetails = ({ productId }) => {
                         <button
                             className={`mt-8 flex items-center px-5 py-3 rounded text-lg ${clickedButtonId === productDetails._id
                                 ? "bg-green-500"
-                                : "bg-yellow-500 hover:bg-yellow-600"
+                                : "bg-indigo-600 hover:bg-indigo-700"
                                 } text-gray-800 transition duration-300 transform`}
                             onClick={() => handleAddToCart(productDetails._id)}
                         >
@@ -143,7 +143,7 @@ const ProductDetails = ({ productId }) => {
                         {productDetails.specifications.map((spec, index) => (
                             <div
                                 key={index}
-                                className="p-2 text-gray-900 hover:text-yellow-500 transition-transform hover:scale-105 transform-gpu duration-300 hover:bg-gray-900 hover:shadow-md rounded-md"
+                                className="p-2 text-gray-900 hover:text-slate-300 transition-transform hover:scale-105 transform-gpu duration-300 hover:bg-gray-900 hover:shadow-md rounded-md"
                             >
                                 <dt className="font-semibold">{spec.key}</dt>
                                 <dd className="text-sm font-medium">{spec.value}</dd>

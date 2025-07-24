@@ -24,7 +24,7 @@ const Navbar = () => {
                     <>
                         <button
                             onClick={handleDrawerToggle}
-                            className="flex items-center space-x-2 focus:outline-none relative border-2 border-white hover:border-gray-900 p-2 rounded-full hover:bg-yellow-500 text-white hover:text-gray-900 transition-all duration-200"
+                            className="flex items-center space-x-2 focus:outline-none relative border-2 border-white hover:border-gray-900 p-2 rounded-full hover:bg-indigo-700 text-white hover:text-white transition-all duration-200"
                         >
                             <FaUser className="text-2xl cursor-pointer rounded-full" />
                         </button>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 ) : (
                     <Link
                         to="/login"
-                        className="text-white text-xl hover:text-yellow-500 transition duration-300 p-2"
+                        className="text-white text-xl hover:text-indigo-300 transition duration-300 p-2"
                     >
                         Sign In
                     </Link>

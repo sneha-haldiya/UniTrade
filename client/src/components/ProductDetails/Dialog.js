@@ -58,7 +58,7 @@ const Dialog = ({ isOpen, onClose, onSave, id }) => {
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50">
             <div className="dialog-overlay bg-gray-800 opacity-50 absolute inset-0"></div>
-            <div className="dialog-content bg-white p-8 rounded-lg shadow-lg z-50 w-full md:w-1/2">
+            <div className="dialog-content bg-slate-800 p-8 rounded-lg shadow-lg z-50 w-full md:w-1/2">
                 <button
                     className="absolute top-2 right-2 text-gray-700"
                     onClick={onClose}

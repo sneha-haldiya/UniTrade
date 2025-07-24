@@ -5,7 +5,7 @@ import ProductsList from "./Home/index";
 
 const Home = () => {
   return (
-    <div>
+    <div className=" bg-slate-100">
       <Navbar />
       <ProductsList />
       <Footer />

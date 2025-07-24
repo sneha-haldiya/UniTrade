@@ -22,7 +22,6 @@ const Filters = ({
 
     const handleApplyFilters = () => {
         // Pass the filter criteria to the parent component
-        // You can define the filter criteria as an object and pass it to a function like handleFiltersApplied(criteria)
         const filterCriteria = {
             searchQuery,
             collegeQuery,
@@ -45,14 +44,14 @@ const Filters = ({
             <h2 className="text-right font-semibold mb-4 md:hidden">
                 <button
                     onClick={toggleFilters}
-                    className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-yellow-500 hover:text-gray-900 transition-all"
+                    className="bg-gray-800 text-white py-2 px-4 rounded hover:bg-indigo-700 transition-all"
                 >
                     Filters
                 </button>
             </h2>
             <div className={filtersClass}>
                 <div className="mb-4">
-                    <label className="text-gray-600 block mb-2">Search:</label>
+                    <label className="text-gray-800 block mb-2">Search:</label>
                     <input
                         type="text"
                         className="bg-gray-800 text-white p-2 w-full border-2 border-transparent focus:border-white"
@@ -62,7 +61,7 @@ const Filters = ({
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-600 block mb-2">College:</label>
+                    <label className="text-gray-800 block mb-2">College:</label>
                     <input
                         type="text"
                         className="bg-gray-800 text-white p-2 w-full border-2 border-transparent focus:border-white"
@@ -83,7 +82,7 @@ const Filters = ({
                     </select>
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-600 block mb-2">Sort By:</label>
+                    <label className="text-gray-800 block mb-2">Sort By:</label>
                     <select
                         value={sortBy}
                         onChange={handleSortChange}
@@ -95,7 +94,7 @@ const Filters = ({
                     </select>
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-600 block mb-2">Category:</label>
+                    <label className="text-gray-800 block mb-2">Category:</label>
                     <select
                         value={categoryFilter}
                         onChange={handleCategoryFilterChange}
@@ -112,7 +111,7 @@ const Filters = ({
                     </select>
                 </div>
                 <div className="mb-4">
-                    <label className="text-gray-600 block mb-2">Price Range:</label>
+                    <label className="text-gray-800 block mb-2">Price Range:</label>
                     <input
                         type="range"
                         min={0}
@@ -134,14 +133,14 @@ const Filters = ({
                         className="ml-2 w-full bg-gray-900"
                     />
                     <div className="flex justify-between">
-                        <span className="text-gray-600">{priceRange[0]}</span>
-                        <span className="text-gray-600">{priceRange[1]}</span>
+                        <span className="text-white">{priceRange[0]}</span>
+                        <span className="text-white">{priceRange[1]}</span>
                     </div>
                 </div>
                 <div className="mb-4">
                     <button
                         onClick={handleApplyFilters}
-                        className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-yellow-500 hover:text-gray-900 transition-all"
+                        className="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-900  transition-all"
                     >
                         Apply Filters
                     </button>

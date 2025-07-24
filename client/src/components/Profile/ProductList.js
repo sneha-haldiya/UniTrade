@@ -10,7 +10,7 @@ const ProductList = ({ userProducts, onDeleteProduct }) => {
                     <div
                         key={product._id}
                         to={`/product/${product._id}`}
-                        className="bg-white p-4 rounded-lg shadow-2xl border-t-4 border-l-4 border-yellow-500 relative flex flex-col justify-between"
+                        className="bg-slate-700 p-4 rounded-lg shadow-2xl border-t-4 border-l-4 border-yellow-500 relative flex flex-col justify-between"
                     >
                         <button
                             onClick={(e) => {
@@ -40,24 +40,24 @@ const ProductList = ({ userProducts, onDeleteProduct }) => {
                                 alt={product.name}
                                 className="w-full h-64 object-cover mb-4 rounded-lg"
                             />
-                            <h2 className="text-lg font-semibold text-gray-900 mb-2">
+                            <h2 className="text-lg font-semibold text-white mb-2">
                                 {product.name}
                             </h2>
-                            <p className="text-gray-600 mb-2">
+                            <p className="text-white mb-2">
                                 {product.description.length > 100
                                     ? `${product.description.slice(0, 100)}...`
                                     : product.description}
                             </p>
-                            <p className="text-yellow-500 text-lg font-semibold mb-2">
+                            <p className="text-indigo-300 text-lg font-semibold mb-2">
                                 ₹{parseFloat(product.price.$numberDecimal).toFixed(2)}
                             </p>
                         </div>
-                        <span className="bg-white text-gray-900 py-1 rounded">
+                        <span className="text-white py-1 rounded">
                             Uploaded on - {new Date(product.createdAt).toLocaleDateString()}
                         </span>
                         <Link
                             to={`/product/${product._id}`}
-                            className="bg-yellow-500 text-white text-center py-2 rounded hover:bg-gray-900 transition duration-300"
+                            className="bg-indigo-600 text-white text-center py-2 rounded hover:bg-indigo-800 transition duration-300"
                         >
                             View Product
                         </Link>

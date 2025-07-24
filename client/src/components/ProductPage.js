@@ -10,7 +10,7 @@ const ProductPage = () => {
         <div>
             <Navbar />
             <div className="mx-auto w-full md:w-4/5 p-4 ">
-                <h1 className="text-3xl font-semibold text-gray-900">Product Details</h1>
+                <h1 className="text-3xl font-semibold text-white">Product Details</h1>
                 {id && <ProductDetails productId={id} />}{" "}
             </div>
             <Footer />
